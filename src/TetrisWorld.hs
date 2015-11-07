@@ -16,7 +16,7 @@ import Graphics.Rendering.OpenGL hiding (T, S)
 import Piece
 import Block
 import System.Random
-import Array
+import Data.Array
 import Stack
 import Constants
 

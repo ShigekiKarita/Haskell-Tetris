@@ -1,4 +1,3 @@
-
 module Constants (
   V2(V2),
   V4(V4),
@@ -23,5 +22,3 @@ translateV2 (V2 x1 y1) (V2 x2 y2) = V2 (x1 + x2) (y1 + y2)
 
 
 data V4 = V4 Float Float Float Float
-
-

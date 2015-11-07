@@ -11,6 +11,7 @@ import Block
 import Piece
 import TetrisWorld
 import Constants
+import Unsafe.Coerce
 
 display world = do
   clear [ColorBuffer, DepthBuffer]
@@ -28,7 +29,7 @@ drawCube w v c = preservingMatrix $ do
   cubeLines w
 
 drawBlock :: Block -> IO ()
-drawBlock (Block (V2 x y) c) = drawCube 0.5 (Vector3 x y 0.0) c
+drawBlock (Block (V2 x y) c) = drawCube 0.5 (Vector3 (realToFrac x) (realToFrac y) 0.0) c
 
 drawPiece :: Piece -> IO ()
 drawPiece (Piece blocks _) = foldl (\ acc block -> (drawBlock block) >> acc) (return()) blocks

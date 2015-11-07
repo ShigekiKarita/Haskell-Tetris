@@ -9,7 +9,7 @@ import Piece
 import Block
 import TetrisWorld
 import System.Random
-import Array
+import Data.Array
 
 main :: IO()
 main = do
